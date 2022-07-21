@@ -1,4 +1,4 @@
-# NeRF-SR: High-Quality Neural Radiance Fields using Superampling
+# NeRF-SR: High-Quality Neural Radiance Fields using Supersampling
 
 This is the official implementation of our ACM MM 2022 paper `NeRF-SR: High-Quality Neural Radiance Fields using Supersampling`. Pull requests and issues are welcome.
 
