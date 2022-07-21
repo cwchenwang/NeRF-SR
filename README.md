@@ -1,10 +1,10 @@
-# NeRF-SR: High-Quality Neural Radiance Fields using Super-Sampling
+# NeRF-SR: High-Quality Neural Radiance Fields using Superampling
 
-This is the official implementation of our ACM MM 2022 paper `NeRF-SR: High-Quality Neural Radiance Fields using Super-Sampling`. Pull requests and issues are welcome.
+This is the official implementation of our ACM MM 2022 paper `NeRF-SR: High-Quality Neural Radiance Fields using Supersampling`. Pull requests and issues are welcome.
 
 ### [Project Page](https://cwchenwang.github.io/NeRF-SR) | [Video](https://youtu.be/c3Yx2nGvi8o) | [Paper](https://arxiv.org/abs/2112.01759)
 
-Abstract: *We present NeRF-SR, a solution for high-resolution (HR) novel view synthesis with mostly low-resolution (LR) inputs. Our method is built upon Neural Radiance Fields (NeRF) that predicts per-point density and color with a multi-layer perceptron. While producing images at arbitrary scales, NeRF struggles with resolutions that go beyond observed images. Our key insight is that NeRF benefits from 3D consistency, which means an observed pixel absorbs information from nearby views. We first exploit it by a super-sampling strategy that shoots multiple rays at each image pixel, which further enforces multi-view constraint at a sub-pixel level. Then, we show that NeRF-SR can further boost the performance of super-sampling by a refinement network that leverages the estimated depth at hand to hallucinate details from related patches on an HR reference image. Experiment results demonstrate that NeRF-SR generates high-quality results for novel view synthesis at HR on both synthetic and real-world datasets.*
+Abstract: *We present NeRF-SR, a solution for high-resolution (HR) novel view synthesis with mostly low-resolution (LR) inputs. Our method is built upon Neural Radiance Fields (NeRF) that predicts per-point density and color with a multi-layer perceptron. While producing images at arbitrary scales, NeRF struggles with resolutions that go beyond observed images. Our key insight is that NeRF benefits from 3D consistency, which means an observed pixel absorbs information from nearby views. We first exploit it by a supersampling strategy that shoots multiple rays at each image pixel, which further enforces multi-view constraint at a sub-pixel level. Then, we show that NeRF-SR can further boost the performance of supersampling by a refinement network that leverages the estimated depth at hand to hallucinate details from related patches on an HR reference image. Experiment results demonstrate that NeRF-SR generates high-quality results for novel view synthesis at HR on both synthetic and real-world datasets.*
 
 ## Requirements
 The codebase is tested on 
@@ -86,7 +86,7 @@ For vanilla-NeRF, just test the trained NeRF under high resolutions using `bash 
 If you consider our paper or code useful, please cite our paper:
 ```
 @article{wang2021nerf-sr,
-    title={NeRF-SR: High-Quality Neural Radiance Fields using Super-Sampling},
+    title={NeRF-SR: High-Quality Neural Radiance Fields using Supersampling},
     author={Chen Wang and Xian Wu and Yuan-Chen Guo and Song-Hai Zhang and Yu-Wing Tai and Shi-Min Hu},
     journal={arXiv},
     year={2021}
