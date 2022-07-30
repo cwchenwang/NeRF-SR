@@ -624,8 +624,6 @@ class NeRFDownXModel(NeRFModel):
         coarse_depth_mats, fine_depth_mats = [], []
         coarse_depth_mats_ori, fine_depth_mats_ori = [], []
         for i, data in enumerate(tqdm(dataset, desc="Testing", total=len(dataset.dataloader))):
-            if i >= 1:
-                break
             self.set_input(data)
             self.forward()
             self.comp_low_res_output()
