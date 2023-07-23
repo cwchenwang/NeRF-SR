@@ -7,7 +7,7 @@ scikit-build
 opencv-python
 tensorboard
 kornia
-eniops
+einops
 imageio==2.9.0
 
 torch==1.8.1
