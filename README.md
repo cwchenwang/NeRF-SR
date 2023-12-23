@@ -6,6 +6,8 @@ This is the official implementation of our ACM MM 2022 paper `NeRF-SR: High-Qual
 
 Abstract: *We present NeRF-SR, a solution for high-resolution (HR) novel view synthesis with mostly low-resolution (LR) inputs. Our method is built upon Neural Radiance Fields (NeRF) that predicts per-point density and color with a multi-layer perceptron. While producing images at arbitrary scales, NeRF struggles with resolutions that go beyond observed images. Our key insight is that NeRF benefits from 3D consistency, which means an observed pixel absorbs information from nearby views. We first exploit it by a supersampling strategy that shoots multiple rays at each image pixel, which further enforces multi-view constraint at a sub-pixel level. Then, we show that NeRF-SR can further boost the performance of supersampling by a refinement network that leverages the estimated depth at hand to hallucinate details from related patches on an HR reference image. Experiment results demonstrate that NeRF-SR generates high-quality results for novel view synthesis at HR on both synthetic and real-world datasets.*
 
+**Note: There is an error in the paper, for LLFF dataset training, the input resolution is 252x189, but the paper said it's 504x378.**
+
 ## Requirements
 The codebase is tested on 
 * Python 3.6.9 (should be compatible with Python 3.7+)
@@ -85,11 +87,12 @@ For vanilla-NeRF, just test the trained NeRF under high resolutions using `bash 
 ## Citation
 If you consider our paper or code useful, please cite our paper:
 ```
-@article{wang2021nerf-sr,
-    title={NeRF-SR: High-Quality Neural Radiance Fields using Supersampling},
-    author={Chen Wang and Xian Wu and Yuan-Chen Guo and Song-Hai Zhang and Yu-Wing Tai and Shi-Min Hu},
-    journal={arXiv},
-    year={2021}
+@inproceedings{wang2022nerf,
+  title={NeRF-SR: High-Quality Neural Radiance Fields using Supersampling},
+  author={Wang, Chen and Wu, Xian and Guo, Yuan-Chen and Zhang, Song-Hai and Tai, Yu-Wing and Hu, Shi-Min},
+  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
+  pages={6445--6454},
+  year={2022}
 }
 ```
 
