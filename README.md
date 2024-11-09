@@ -20,9 +20,10 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-In our paper, we use the same dataset as in NeRF:
-- [Blender](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
+In our paper, we use the same dataset as in NeRF.
+We only use LLFF dataset, but Blender is still possible:
 - [LLFF](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
+- [Blender](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
 
 However, our method is compatible to any dataset than can be trained on NeRF to perform super-resolution. Feel free to try out.
 
@@ -50,7 +51,7 @@ Please check the configuration in the scripts. You can always modify it to your 
 ```bash
 bash scripts/train_llff_downX.sh
 ```
-to train a 504x378 NeRF with 252x179 inputs.
+to train a 504x378 NeRF inputs.
 or
 ```bash
 bash scripts/train_blender_downX.sh
@@ -63,7 +64,8 @@ python warp.py
 ```
 to create `*.loc` files. An example of `*.loc` files can be found in the provided `fern` checkpoints (in the `30_val_vis` folder), which can be used directly for refinement.
 
-After that, you can train the refinement model:
+After that, you can train the refinement model.
+It is needed only for LLFF dataset:
 ```bash
 bash scripts/train_llff_refine.sh
 ```
